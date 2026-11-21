@@ -29,9 +29,9 @@
 | 역할 | 담당 파일 |
 |---|---|
 | ① 통합·화면 | tools/index.html, tools/assets/common.js, tools/assets/style.css, README.md, docs/demo_script.md |
-| ② 기능 A | tools/pages/{기능A 영문}.html, tools/assets/{기능A 영문}.js |
-| ③ 기능 B | tools/pages/{기능B 영문}.html, tools/assets/{기능B 영문}.js |
-| ④ 검증·데이터 | data/team_sample.*, tests/acceptance.md, tests/run_acceptance.py |
+| ② 기능 A | tools/pages/docs_check.html, tools/assets/docs_check.js |
+| ③ 기능 B | tools/pages/docs_date.html, tools/assets/docs_date.js |
+| ④ 검증·데이터 | data/team_sample.csv, tests/acceptance.md, tests/run_acceptance.py |
 
 ## 웹앱 규칙 (모든 세션에 적용)
 - 결과물은 `tools/` 아래 여러 페이지 HTML 웹앱이다: `index.html`(시작·메뉴·요약·백업·비우기) + `pages/` 기능 페이지 2개 + `assets/` 공통 파일. 병합된 main은 GitHub Pages로 배포된다.
