@@ -27,7 +27,7 @@
 | `docs` | 불러온 서류 목록 | 배열, 한 건 = `{id, type, name, issued}` (신청번호·신청유형·서류명·발급일 `YYYY-MM-DD`) | ② 기능 A | ③ 기능 B |
 | `missing` | 누락 점검 결과 | 배열, 한 건 = `{id, type, lacks}` (`lacks` = 빠진 서류명 배열) | ② 기능 A | ① 시작 |
 | `dateIssues` | 발급일 어긋남 결과 | 배열, 한 건 = `{id, name, issued, notice}` (`notice` = 가상 모집공고일) | ③ 기능 B | ① 시작 |
-| `checks` | 판정하지 못한 행(확인 필요) | 배열, 한 건 = `{id, page, reason}` (`page` = `"A"` 또는 `"B"`) | ② 기능 A, ③ 기능 B | ① 시작 |
+| `checks` | 판정하지 못한 행(확인 필요 — 시작 페이지 요약의 "확인 필요 n") | 배열, 한 건 = `{id, page, reason}` (`page` = `"A"` 또는 `"B"`) | ② 기능 A, ③ 기능 B | ① 시작 |
 
 - 예시 1건: `{"docs":[{"id":"R-001","type":"일반","name":"주민등록등본","issued":"2026-10-28"}],"missing":[{"id":"R-003","type":"일반","lacks":["가족관계증명서"]}],"dateIssues":[{"id":"R-005","name":"주민등록등본","issued":"2026-09-30","notice":"2026-10-01"}],"checks":[{"id":"R-009","page":"B","reason":"발급일 형식 오류"}]}`
 - **[가정]** ②가 CSV를 다시 불러오면 `docs`·`missing`과 `page:"A"`인 `checks`를 새로 쓰고, 이전 결과가 섞이지 않게 `dateIssues`와 `page:"B"`인 `checks`를 비웁니다.
