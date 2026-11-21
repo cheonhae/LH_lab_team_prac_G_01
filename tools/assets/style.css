@@ -37,6 +37,15 @@ h2 { font-size: 1.15rem; margin: 24px 0 8px; }
 }
 .menu a:hover, .menu a:focus { border-color: #1f4e8c; }
 
+.summary { display: flex; flex-wrap: wrap; gap: 12px; margin: 12px 0; padding: 0; list-style: none; }
+.summary li {
+  padding: 10px 16px;
+  border: 1px solid #d9dee4;
+  border-radius: 6px;
+  background: #fff;
+}
+.summary strong { font-size: 1.4rem; margin-left: 6px; }
+
 button {
   font: inherit;
   padding: 8px 14px;
